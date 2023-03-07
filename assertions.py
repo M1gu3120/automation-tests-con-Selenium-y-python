@@ -9,7 +9,7 @@ class AssertionsTest(unittest.TestCase):
         driver = self.driver                                                     en la raiz de C//
         driver.implicitly_wait(30)
         driver.maximize_window()
-        driver.get('http://demo-store.seleniumacademy.com/')             //Poner el link de la pagina que le va hacer pruebas 
+        driver.get('http://demo-store.seleniumacademy.com/')             // Poner el link de la pagina que le va hacer pruebas 
 
     def test_search_field(self):
         self.assertTrue(self.is_element_present(By.NAME, 'q'))
