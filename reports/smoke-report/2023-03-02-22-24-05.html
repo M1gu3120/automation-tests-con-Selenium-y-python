@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Result</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Test Result</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-03-02 22:22:09</p>
+                <p class='attribute'><strong>Duration: </strong>116.319s</p>
+                <p class='attribute'><strong>Status: </strong>Pass: 1, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>smoke-report</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr class='success'>
+                                <td class="col-xs-9">test_search_tee (searchtests.SearchTests.test_search_tee)</td>
+                                <td class="col-xs-3">
+                                    <span class="label label-success">
+                                        
+                                            Pass
+                                        
+                                    </span>
+                                    
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class='warning'>
+                                <td class="col-xs-9">test_search_salt_shaker (searchtests.SearchTests.test_search_salt_shaker)</td>
+                                <td class="col-xs-3">
+                                    <span class="label label-warning">
+                                        
+                                            Error
+                                        
+                                    </span>
+                                    
+                                        &nbsp<button class="btn btn-default btn-xs">View</button>
+                                    
+                                </td>
+                            </tr>
+                            
+                                <tr style="display:none;">
+                                    <td class="col-xs-9">
+                                        <p>WebDriverException</p>
+                                        <p>Message: disconnected: unable to send message to renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=110.0.5481.178)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x002337D3]
+	(No symbol) [0x001C8B81]
+	(No symbol) [0x000CB36D]
+	(No symbol) [0x000BBE8F]
+	(No symbol) [0x000BC63A]
+	(No symbol) [0x000D45AE]
+	(No symbol) [0x000CDBC0]
+	(No symbol) [0x000CD703]
+	(No symbol) [0x000CDF6C]
+	(No symbol) [0x000CE250]
+	(No symbol) [0x000FCFEC]
+	(No symbol) [0x000FD4BB]
+	(No symbol) [0x0013333C]
+	(No symbol) [0x0011B464]
+	(No symbol) [0x00131215]
+	(No symbol) [0x0011B216]
+	(No symbol) [0x000F0D97]
+	(No symbol) [0x000F253D]
+	GetHandleVerifier [0x004AABF2+2510930]
+	GetHandleVerifier [0x004D8EC1+2700065]
+	GetHandleVerifier [0x004DC86C+2714828]
+	GetHandleVerifier [0x002E3480+645344]
+	(No symbol) [0x001D0FD2]
+	(No symbol) [0x001D6C68]
+	(No symbol) [0x001D6D4B]
+	(No symbol) [0x001E0D6B]
+	BaseThreadInitThunk [0x757700F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77557BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77557B8E+238]
+	(No symbol) [0x00000000]
+</p>
+                                    </td>
+                                </tr>
+                            
+                        
+                        <tr>
+                            <td>
+                               Total Test Runned: 2
+                            </td>
+                            <td>
+                                <span>Pass: 1, Error: 1</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html>
