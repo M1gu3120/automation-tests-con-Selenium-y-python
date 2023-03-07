@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 class SearchTests(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path = r"C:\Users\Ing Miguel Angel\Desktop\chromedriver.exe")
+        self.driver = webdriver.Chrome(executable_path = r"C:chromedriver.exe")
         driver = self.driver
         driver.implicitly_wait(30)
         driver.maximize_window()
